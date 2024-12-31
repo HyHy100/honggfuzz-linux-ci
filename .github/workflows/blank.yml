@@ -33,7 +33,7 @@ jobs:
       - run: sudo apt-get install binutils-dev libunwind-dev libblocksruntime-dev clang
       
       # Runs a set of commands using the runners shell
-      - run: make -f ${{ github.workspace }}/honggfuzz
+      - run: make -f ${{ github.workspace }}/honggfuzz/Makefile
         working-directory: ${{ github.workspace }}/honggfuzz/build
 
       - uses: actions/upload-artifact@v4
