@@ -31,4 +31,5 @@ jobs:
       - run: mkdir ${{ github.workspace }}/honggfuzz/build
 
       # Runs a set of commands using the runners shell
-      - run: make ${{ github.workspace }}/honggfuzz
+      - run: make
+        working-directory: ${{ github.workspace }}/honggfuzz
