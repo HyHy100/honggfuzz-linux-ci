@@ -36,7 +36,7 @@ jobs:
       - run: make -f ${{ github.workspace }}/honggfuzz/make
         working-directory: ${{ github.workspace }}/honggfuzz/build
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
           name: honggfuzz-linux-x64
           path: ${{ github.workspace }}/honggfuzz/build
