@@ -30,6 +30,8 @@ jobs:
 
       - run: mkdir ${{ github.workspace }}/honggfuzz/build
 
+      - run: sudo apt-get install binutils-dev libunwind-dev libblocksruntime-dev clang
+      
       # Runs a set of commands using the runners shell
       - run: make
         working-directory: ${{ github.workspace }}/honggfuzz
